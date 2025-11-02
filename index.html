@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Describing a Person — 3 Writing Tips (Student Handout)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --ink:#111827; --muted:#475569; --border:#94a3b8; --link:#00247d; --accent:#e11d48; /* crimson accent for icons/borders */
+  }
+  *{box-sizing:border-box}
+  body{margin:0; color:var(--ink); background:#fff; font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Arial}
+  .page{max-width:800px; margin:24px auto; padding:0 16px 32px}
+  h1{margin:8px 0 6px; font-size:24px; color:var(--link)}
+  h2{margin:18px 0 8px; font-size:18px; color:var(--link)}
+  h3{margin:14px 0 6px; font-size:16px}
+  .muted{color:var(--muted)}
+  .box{
+    border:1px solid var(--border); border-radius:10px; padding:12px; margin:12px 0; background:#fff;
+  }
+  .tips{
+    /* Screen: subtle left accent, no filled backgrounds */
+    border-left:6px solid var(--link);
+  }
+  .grid{display:grid; gap:10px}
+  .g-2{grid-template-columns:1fr 1fr}
+  .g-3{grid-template-columns:repeat(3,1fr)}
+  label{font-weight:700; display:inline-block; margin-right:8px}
+  .line{border-bottom:1px dashed var(--border); height:24px; margin:6px 0}
+  .table{width:100%; border-collapse:collapse}
+  .table th,.table td{border:1px solid var(--border); padding:6px; vertical-align:top}
+  .table th{color:var(--link); font-weight:700}
+  textarea{width:100%; min-height:70px; border:1px solid var(--border); border-radius:8px; padding:8px; resize:vertical}
+  .check{display:flex; gap:10px; flex-wrap:wrap}
+  .check label{font-weight:500}
+  .pill{
+    display:inline-block; padding:2px 8px; border:1px solid var(--link); border-radius:999px;
+    font-size:12px; color:var(--link);
+  }
+  .toolbar{display:flex; justify-content:flex-end; margin:10px 0}
+  .print-btn{
+    background:#fff; border:2px solid var(--link); color:var(--link);
+    border-radius:10px; padding:8px 12px; font-weight:700; cursor:pointer
+  }
+  .print-btn:hover{filter:brightness(0.95)}
+  footer{
+    margin-top:18px; text-align:center; font-size:12px; color:#0f172a; /* readable dark */
+  }
+
+  /* Print: keep color text/borders, remove fills */
+  @media print{
+    .toolbar{display:none}
+    .page{margin:0 auto; padding:0}
+    .box{background:transparent; break-inside: avoid}
+    .table th{background:transparent}
+    .pill{background:transparent}
+    /* Force a new page where requested */
+    .print-break{
+      page-break-after: always;      /* legacy */
+      break-after: page;             /* modern */
+    }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="toolbar">
+    <button class="print-btn" onclick="window.print()">🖨️ Print</button>
+  </div>
+
+  <h1>🧠✍️ Describing a Person — 3 Writing Tips</h1>
+  <div class="grid g-3 box">
+    <div><label>Name:</label><div class="line"></div></div>
+    <div><label>Class/Group:</label><div class="line"></div></div>
+    <div><label>Date:</label><div class="line"></div></div>
+  </div>
+
+  <!-- Tip 1 -->
+  <div class="box tips">
+    <h2>🧱 Tip 1 — Paragraphing</h2>
+    <p>Write <strong>one idea per paragraph</strong>. Use a clear order:</p>
+    <p class="pill">appearance → character → overall opinion</p>
+    <div class="check" style="margin-top:6px">
+      <label><input type="checkbox"> I kept one idea per paragraph</label>
+      <label><input type="checkbox"> My order is clear (A → C → O)</label>
+    </div>
+  </div>
+
+  <!-- Tip 2 -->
+  <div class="box tips">
+    <h2>🎨 Tip 2 — Vivid adjectives</h2>
+    <p>Choose precise words + tiny details. Upgrade these:</p>
+    <table class="table">
+      <thead><tr><th>Weak</th><th>Stronger</th><th>Your version</th></tr></thead>
+      <tbody>
+        <tr><td>nice</td><td>helpful, considerate</td><td><div class="line"></div></td></tr>
+        <tr><td>beautiful eyes</td><td>hazel eyes that light up</td><td><div class="line"></div></td></tr>
+        <tr><td>good-looking</td><td>well-built, wavy chestnut hair</td><td><div class="line"></div></td></tr>
+      </tbody>
+    </table>
+    <h3>Mini word bank 🔎</h3>
+    <p class="muted">Pick 5–7 for your paragraph:</p>
+    <ul>
+      <li>curly, wavy, shoulder-length, fair, chestnut, hazel, piercing</li>
+      <li>cheerful, thoughtful, calm, outgoing, quick-witted, reliable, soft-spoken</li>
+    </ul>
+  </div>
+
+  <!-- PRINT PAGE BREAK after Tip 2 -->
+  <div class="print-break"></div>
+
+  <!-- Tip 3 -->
+  <div class="box tips">
+    <h2>✨ Tip 3 — Interesting start & end</h2>
+    <p><strong>Start (hook):</strong> make a picture or surprise.</p>
+    <p class="muted"><em>Example:</em> “You’d notice Alex even in a crowded hall…”</p>
+    <p><strong>End (opinion):</strong> a short takeaway about the person.</p>
+    <p class="muted"><em>Example:</em> “That’s why everyone feels calmer when she walks in.”</p>
+    <div class="grid g-2" style="margin-top:6px">
+      <div>
+        <label>✍️ My hook:</label>
+        <textarea placeholder="Write one sentence that makes a picture or raises curiosity."></textarea>
+      </div>
+      <div>
+        <label>✅ My ending opinion:</label>
+        <textarea placeholder="One sentence with your overall impression or effect on others."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- Micro-practice (end here) -->
+  <div class="box">
+    <h2>⏱️ Micro-practice</h2>
+    <p>Upgrade the sentence using a vivid adjective + one detail.</p>
+    <p class="muted"><em>Starter:</em> “Maria is nice.” → “Maria is <strong>thoughtful</strong>, always saving a seat for new students.”</p>
+    <textarea placeholder="Your upgraded sentence…"></textarea>
+  </div>
+
+  <footer>
+    ✨✍️ Created by Panagiotis Domvros, English and Drama Teacher, All Rights Reserved ✍️✨
+  </footer>
+</div>
+</body>
+</html>

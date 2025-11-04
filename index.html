@@ -11,7 +11,29 @@
   *{box-sizing:border-box}
   body{margin:0; color:var(--ink); background:#fff; font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Arial}
   .page{max-width:800px; margin:24px auto; padding:0 16px 32px}
-  h1{margin:8px 0 6px; font-size:24px; color:var(--link)}
+  
+  /* --- MODIFIED H1 --- */
+  h1{
+    margin:8px 0 6px; 
+    font-size:24px; 
+    color:var(--link);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+  
+  /* --- ADDED LOGO STYLE --- */
+  .header-logo {
+      height: 120px;
+      width: 120px;
+      margin-right: 20px;
+      border-radius: 50%;
+      border: none;
+      flex-shrink: 0;
+  }
+  /* --- END OF MODIFICATIONS --- */
+
   h2{margin:18px 0 8px; font-size:18px; color:var(--link)}
   h3{margin:14px 0 6px; font-size:16px}
   .muted{color:var(--muted)}
@@ -68,14 +90,16 @@
     <button class="print-btn" onclick="window.print()">🖨️ Print</button>
   </div>
 
-  <h1>🧠✍️ Describing a Person — 3 Writing Tips</h1>
+  <h1>
+    <img src="pdhub-logo.png" alt="PD Hub Logo" class="header-logo">
+    🧠✍️ Describing a Person — 3 Writing Tips
+  </h1>
   <div class="grid g-3 box">
     <div><label>Name:</label><div class="line"></div></div>
     <div><label>Class/Group:</label><div class="line"></div></div>
     <div><label>Date:</label><div class="line"></div></div>
   </div>
 
-  <!-- Tip 1 -->
   <div class="box tips">
     <h2>🧱 Tip 1 — Paragraphing</h2>
     <p>Write <strong>one idea per paragraph</strong>. Use a clear order:</p>
@@ -86,7 +110,6 @@
     </div>
   </div>
 
-  <!-- Tip 2 -->
   <div class="box tips">
     <h2>🎨 Tip 2 — Vivid adjectives</h2>
     <p>Choose precise words + tiny details. Upgrade these:</p>
@@ -106,10 +129,8 @@
     </ul>
   </div>
 
-  <!-- PRINT PAGE BREAK after Tip 2 -->
   <div class="print-break"></div>
 
-  <!-- Tip 3 -->
   <div class="box tips">
     <h2>✨ Tip 3 — Interesting start & end</h2>
     <p><strong>Start (hook):</strong> make a picture or surprise.</p>
@@ -128,7 +149,6 @@
     </div>
   </div>
 
-  <!-- Micro-practice (end here) -->
   <div class="box">
     <h2>⏱️ Micro-practice</h2>
     <p>Upgrade the sentence using a vivid adjective + one detail.</p>
